@@ -1,0 +1,8 @@
+#!/usr/bin/env perl
+$pdf_mode = 3;
+$latex            = 'uplatex-dev -synctex=1 %O %S';
+$dvipdf           = 'dvipdfmx %O -o %D %S';
+$makeindex        = 'mendex %O -o %D %S';
+$biber = 'biber --bblencoding=utf8 -u -U --output_safechars';
+
+# system("git rev-parse --short=5 HEAD > ./commithash.txt")

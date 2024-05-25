@@ -1,0 +1,24 @@
+\RequirePackage{plautopatch}
+\documentclass[uplatex, dvipdfmx, a4paper]{jsarticle}
+\usepackage[haranoaji]{pxchfon}
+\usepackage{lmodern}
+
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+\usepackage[british]{babel}
+% \usepackage{babel-japanese}
+\usepackage{csquotes}
+\usepackage{siunitx}
+\usepackage{microtype}
+\usepackage{amsmath, colonequals}
+\usepackage{booktabs}
+
+\usepackage[style=authoryear,doi=false,url=false,isbn=false,eprint=false,backend=biber]{biblatex}
+% \usepackage[style=numeric-comp,doi=true,url=false,isbn=false,eprint=false,backend=biber]{biblatex}
+% \usepackage[style=authoryear,maxnames=2,backref=true,doi=true,url=false,isbn=false,eprint=false,backend=biber]{biblatex}
+\bibliography{bib}
+
+\begin{document}
+こんにちは，日本語はどうでしょう，そしてhello world!
+\end{document}
+
+% vim: set noexpandtab ts=2 sts=2 sw=2 fdm=marker fmr=\:\:\:,;;;:

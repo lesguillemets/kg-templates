@@ -1,0 +1,43 @@
+\documentclass[paper=a4paper, 11pt]{ltjsarticle}
+% \documentclass[a4paper, 11pt]{ltjsarticle}
+\usepackage{lmodern}
+\usepackage{luatexja}
+\usepackage{luatexja-fontspec}
+
+\ltjsetparameter{jacharrange={-2,-3}}
+% \usepackage[haranoaji, deluxe]{luatexja-preset}
+\usepackage[no-math,morisawaBIZUD, deluxe]{luatexja-preset}
+% https://gzutetsu.hatenablog.jp/entry/2021/06/13/135804
+\ltjnewpreset{morisawaBIZUD}{
+	% mc-l=A-OTF-UDReiminPr6N-Light.otf,  % 明朝体細字 \mcfamily\ltseries
+	mc-m=BIZUDMincho-Regular.ttf, % 明朝体中字 \mcfamily\mdseries
+	% mc-b=A-OTF-UDReiminPr6N-Bold.otf, % 明朝体太字 \mcfamily\bfseries
+	gt-m=BIZUDGothic-Regular.ttf, % ゴシック体中字 \gtfamily\mdseries
+	gt-b=BIZUDGothic-Bold, % ゴシック体太字 \gtfamily\bfseries
+	gt-eb=BIZUDGothic-Bold, % ゴシック体太字 \gtfamily\ebseries
+	% mg-m=A-OTF-UDShinMGoPr6N-Regular.otf % 丸ゴシック体 \mgfamily
+}
+\ltjapplypreset{morisawaBIZUD}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+\usepackage{fourier-otf}
+\setsansfont[BoldFont={Fira Sans SemiBold}, ItalicFont={Fira Sans BookItalic}]{Fira Sans Book}
+\setmonofont{Ubuntu Mono}
+
+\usepackage[british]{babel}
+% \usepackage{babel-japanese}
+\usepackage{csquotes}
+\usepackage{siunitx}
+\usepackage{microtype}
+\usepackage{amsmath, colonequals}
+\usepackage{booktabs}
+
+\usepackage[style=authoryear,doi=false,url=false,isbn=false,eprint=false,backend=biber]{biblatex}
+% \usepackage[style=numeric-comp,doi=true,url=false,isbn=false,eprint=false,backend=biber]{biblatex}
+% \usepackage[style=authoryear,maxnames=2,backref=true,doi=true,url=false,isbn=false,eprint=false,backend=biber]{biblatex}
+\bibliography{bib}
+
+\begin{document}
+こんにちは，日本語はどうでしょう，そしてhello world!
+\end{document}
+
+% vim: set noexpandtab ts=2 sts=2 sw=2 fdm=marker fmr=\:\:\:,;;;:
