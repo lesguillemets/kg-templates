@@ -1,0 +1,90 @@
+\documentclass[dvipdfmx,12pt, xcolor={svgnames}]{beamer}
+\usepackage{bxdpx-beamer}
+\usepackage{pxjahyper}% 日本語で'しおり'
+\renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+
+\usepackage[haranoaji]{pxchfon}
+\usepackage{lmodern}
+
+% \usepackage{enumitem}
+% \setitemize{label=\usebeamerfont*{itemize item}%
+% 	\usebeamercolor[fg]{itemize item}
+% 	\usebeamertemplate{itemize item}}
+% https://tex.stackexchange.com/a/24491
+
+% \usepackage{multicol}
+% \usepackage{multirow}
+
+\hypersetup{
+	% pdfborder={0 0 1},
+	breaklinks=true,
+	% colorlinks=true,
+	% linkcolor=black,
+	urlbordercolor=cyan,
+}
+% \usepackage{makecell}  % https://tex.stackexchange.com/questions/2441
+% \usepackage{ulem}
+% \usepackage{booktabs}
+\usepackage[british]{babel}
+% \usepackage{babel-japanese}
+\usepackage{csquotes}
+\usepackage{siunitx}
+\usepackage{microtype}
+
+% \usepackage[style=numeric-comp,doi=true,url=false,isbn=false,eprint=false,backend=biber]{biblatex}
+\usepackage[style=authoryear,maxnames=2,backref=true,doi=true,url=false,isbn=false,eprint=false,backend=biber]{biblatex}
+% \setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography item}{}
+\bibliography{bib}
+\AtBeginBibliography{\scriptsize}
+
+% Theme :::
+% \usetheme[numbering=fraction, progressbar=frametitle, block=fill]{metropolis}
+\usetheme{Antibes}
+% \useoutertheme{infolines}
+% \useinnertheme{circles}
+\usecolortheme{rose}
+% \setbeamertemplate{enumerate items}[default]
+% \setbeamertemplate{footline}[frame number]
+% \beamertemplatenavigationsymbolsempty
+
+% \setbeamercovered{transparent}
+% \setbeamercolor{block title}{fg=darkred}
+% \setbeamercolor{local structure}{fg=darkred}
+
+% \setlength{\leftmargini}{1em}
+% \setlength{\leftmarginii}{1em}
+% ;;;
+
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Outline}\tableofcontents[currentsection]\end{frame}}
+
+\newcommand{\mycite}[1]{\textcolor{darkgray}{{\textsuperscript{\tiny[\cite{#1}]}}}}
+\newcommand{\mycitepre}[2]{\textcolor{darkgray}{{\textsuperscript{\tiny[\cite[#1]{#2}]}}}}
+
+\title{title}
+\author{}
+\institute{}
+\date{\today}
+\subtitle{revision~\texttt{\input{./commithash.txt}}}
+
+
+\begin{document}
+% ::: head
+\begin{frame}
+	\titlepage{}
+\end{frame} %;;;
+% ;;;
+
+\begin{frame}{タイトル}
+	どうですか？
+\end{frame}
+
+
+\appendix
+\begin{frame}[c,allowframebreaks]{References} % :::
+	\printbibliography[heading=none] % https://tex.stackexchange.com/a/371416/82577
+\end{frame} % ;;;
+
+\end{document}
+
+% vim: set noexpandtab ts=2 sts=2 sw=2 fdm=marker fmr=\:\:\:,;;;:
